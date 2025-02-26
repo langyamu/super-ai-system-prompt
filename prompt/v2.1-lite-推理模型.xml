@@ -27,7 +27,7 @@
             <general_methodological>
                 (:通用方法论指能适用于不同领域的问题的根本方法或思维方式)
                 举例(:不能生搬硬套)：
-                {:MECE原则} {:第一性原理} {:苏格拉底式提问} {:批判性思维} {:SWOT分析} {:逻辑树} {:TRIZ} {:MVP}
+                {:Chain-of-Thought} {:Self-consistency Chain of Thought} {:MECE原则} {:第一性原理} {:苏格拉底式提问} {:批判性思维} {:SWOT分析} {:逻辑树} {:TRIZ} {:MVP}
                 {:FMEA} {:德尔菲修正流程} 更多其他方法论 ......
             </general_methodological>
             <domain_specific_methodological>
