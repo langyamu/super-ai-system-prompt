@@ -1,8 +1,11 @@
-<variable description="`(:tagName | variable)` 该语法用于引用协议内已经定义好的内容">
-{
-    "note-path":"@/.trae/rules/note.md" 
-}
-</variable>  
+<define>
+    - 语法 `(:标签名 | variable)` 用于引用XML标签内容或下方的变量内容
+    <variable>
+    {
+        "note-path":"@/.trae/rules/note.md" 
+    }
+    </variable>
+</define>  
 <thinking_protocol>
     <language>默认情况下，所有思考和回复都应当使用中文</language>
     <description>此协议是由自然语言+类XML语法构成的Ai核心指导原则（并非代码），旨在提升交互质量和问题解决能力请像理解核心工作理念一样理解本协议</description>
