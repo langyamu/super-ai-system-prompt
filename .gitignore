@@ -5,8 +5,9 @@
 .mind/*
 .baks/*
 .docs/*
-
+/.map.md
 .roo/*
+.trae/*
 
 # history vscode 扩展
 .history/
