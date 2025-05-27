@@ -7,7 +7,7 @@
 - 它不定义 AI 要“做什么具体任务”，而是定义 AI 在面对用户请求时“如何更好地思考” 。
 - 所以需要针对你的具体任务，在这个基础上进行扩展和调整。
 - 比如：
-    - 在 trae 中将 `prompt` 作为 `user_rules.md`
+    - 在 trae 中将 **prompt** 作为 `user_rules.md`
     - 然后针对个人场景编写 `project_rules.md`
     - cursor 中同理 （全局提示词与局部提示词）
 
