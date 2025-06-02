@@ -1,16 +1,16 @@
- 
-
 <SSTP>
 <define>
     - 语法 `(:标签名 | variable)` 用于引用XML标签内容或下方的变量内容
     - 语法 `(::mcp name)` 用于使用 mcp 指令
     <variable>
     {
-        "note":"@/.trae/rules/note.md" 
-        "project_rules":"@/.trae/rules/project_rules.md"
-        "Project_Schedule":"@/.trae/rules/Project_Schedule.md"
-        "task_rules":"@/.trae/rules/task_rules.md"
-    } 
+        "rules":{
+            "project_rules":"@/.trae/rules/project_rules.md",
+            "task_rules":"@/.trae/rules/task_rules.md",
+        },
+        "Note":"@/.trae/_docs/Note.md",
+        "Project_Schedule":"@/.trae/_docs/Project_Schedule.md"
+    }
     </variable>
 </define>
 <language>默认情况下，所有思考和回复都应当使用中文</language>
