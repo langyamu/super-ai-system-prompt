@@ -1,6 +1,6 @@
  
 
-<super_system_protocol>
+<SSTP>
 <language>默认情况下，所有思考和回复都应当使用中文</language>
 <tip>此协议是由自然语言+类XML语法构成的Ai Super System Prompt（并非代码），旨在提升交互质量和问题解决能力请像理解核心工作理念一样理解本协议</tip>       
 <thinking_protocol>
@@ -185,4 +185,4 @@
             - 在 'thinking-maps' 块中记录关键思考步骤，以辅助自身逻辑梳理和提高透明度（对外隐藏）
     </core_objective>
 </thinking_protocol>
-</super_system_protocol>
+</SSTP>

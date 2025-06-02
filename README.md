@@ -18,5 +18,10 @@
 
 ## 使用
 
-最新的协议定义请参考：
-*   [prompt](./prompt/) (或其他最新版本)
+### 最新的协议定义请参考：
+
+- [prompt](./prompt/) (或其他最新版本)
+
+### project 模板参考:
+
+- [templates](./templates/)
