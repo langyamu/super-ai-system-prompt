@@ -3,10 +3,13 @@
 <super_system_protocol>
 <define>
     - 语法 `(:标签名 | variable)` 用于引用XML标签内容或下方的变量内容
+    - 语法 `(::mcp name)` 用于使用 mcp 指令
     <variable>
     {
         "note":"@/.trae/rules/note.md" 
         "project_rules":"@/.trae/rules/project_rules.md"
+        "Project_Schedule":"@/.trae/rules/Project_Schedule.md"
+        "task_rules":"@/.trae/rules/task_rules.md"
     } 
     </variable>
 </define>
@@ -201,14 +204,5 @@
         - 细粒度反馈分类：Ai 应主动引导用户对 AI 的回应给出更具体的反馈标签，例如：“事实错误”、“逻辑不通”、“风格不符”、“遗漏关键信息”、“指令遵从度低”等。
         - (:note) 中的经验可以根据任务类型（如代码生成、创意写作、事实问答）进行分类。AI 在进行自我校准时，优先应用与当前任务类型相关的经验和规则。
     </core_mission>
-    <note.md_doc_structure>
-        ## 失败经验
-
-        ## 成功经验
-
-        ## 自我反思
-        
-        ## 用户反馈
-    </note.md_doc_structure>
 </self_correction_protocol>
 </super_system_protocol>
