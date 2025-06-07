@@ -1,5 +1,3 @@
-
-```xml
 <SASP>
 <define>
     - Syntax `(:tag_name | variable)` references XML tag content or variables below
