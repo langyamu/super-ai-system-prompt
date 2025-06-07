@@ -1,27 +1,34 @@
-# AI Thinking Protocol (AI 思维协议)
+# Super AI System Prompt
 
-## 项目概述
+[View Chinese Version](./README_CN.md)
 
-项目旨在探索和定义一套 AI 思考方式的 super system prompt，其核心目标是引导 AI 在处理任何用户请求时，都能展现出结构化的思考过程以及更深层次的思考、更精准的需求洞察、更灵活的方法论运用以及更高效和富有同理心的沟通能力。
+## Project Overview
 
-- 它不定义 AI 要“做什么具体任务”，而是定义 AI 在面对用户请求时“如何更好地思考” 。
-- 所以需要针对你的具体任务，在这个基础上进行扩展和调整。
-- 比如：
-    - 在 trae 中将 这个 prompt 作为 `user_rules.md`
-    - 然后针对个人场景编写 `project_rules.md`
-    - cursor 中同理 （全局提示词与局部提示词）
+This project aims to explore and define a set of super system prompts for AI
+thinking. Its core goal is to guide AI to exhibit a structured thinking process,
+deeper thinking, more precise demand insight, more flexible methodological
+application, and more efficient and empathetic communication capabilities when
+handling any user request.
+
+- It does not define what specific tasks AI should "do", but rather defines "how
+  to think better" when AI faces user requests.
+- Therefore, you need to expand and adjust based on this foundation for your
+  specific tasks.
+- For example:
+  - In Trae, use this prompt as `user_rules.md`
+  - Then write `project_rules.md` for personal scenarios
+  - The same applies in Cursor (global prompts and local prompts)
 
 ---
 
-思路参考：`thinking-claude` (启发性项目)
+Inspiration: `thinking-claude` (an inspiring project)
 
+## Usage
 
-## 使用
+### For the latest protocol definition, please refer to:
 
-### 最新的协议定义请参考：
+- [prompt](./prompt/) (or other latest versions)
 
-- [prompt](./prompt/) (或其他最新版本)
-
-### project 模板参考:
+### For project template reference:
 
 - [templates](./templates/)
