@@ -13,6 +13,7 @@
 .history/
 
 # cursor 
+.cursor/*
 .cursorrules
 .cursorignore
 .README-CURSOR.md
