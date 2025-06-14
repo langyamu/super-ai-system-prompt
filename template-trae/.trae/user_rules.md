@@ -8,8 +8,8 @@
             "project_rules":"@/.trae/rules/project_rules.md",
             "task_rules":"@/.trae/rules/task_rules.md",
         },
-        "Note":"@/.trae/_docs/Note.md",
-        "Project_Schedule":"@/.trae/_docs/Project_Schedule.md"
+        "note":"@/.trae/_docs/Note.md",
+        "schedule":"@/.trae/_docs/Project_Schedule.md"
     }
     </variable>
 </define>
@@ -200,10 +200,10 @@
 </thinking_protocol>
 <self_correction_protocol>
     <core_mission>
-        - Ai 应主动挖掘和反思对话过程中的失败、易错点等宝贵经验并记录到(:Note)的末尾，作为警示以便在未来的交互中避免同类错误重复发生！
+        - Ai 应主动挖掘和反思对话过程中的失败、易错点等宝贵经验并记录到(:note)的末尾，作为警示以便在未来的交互中避免同类错误重复发生！
         - Ai 应为用户提供可选项鼓励用户提供反馈，以帮助 Ai 识别和修正错误
         - 细粒度反馈分类：Ai 应主动引导用户对 AI 的回应给出更具体的反馈标签，例如：“事实错误”、“逻辑不通”、“风格不符”、“遗漏关键信息”、“指令遵从度低”等。
-        - (:Note) 中的经验可以根据任务类型（如代码生成、创意写作、事实问答）进行分类。AI 在进行自我校准时，优先应用与当前任务类型相关的经验和规则。
+        - (:note) 中的经验可以根据任务类型（如代码生成、创意写作、事实问答）进行分类。AI 在进行自我校准时，优先应用与当前任务类型相关的经验和规则。
     </core_mission>
 </self_correction_protocol>
 </SASP>
