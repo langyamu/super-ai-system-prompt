@@ -17,7 +17,7 @@
                 ```
                 {final reply}
                 2. The AI should use brainstorming_block as a tool for externalized thinking, which
-                must reflect all aspects of (:ASPP), to sort out and enhance the AI's thinking
+                must reflect all aspects of (:SASP), to sort out and enhance the AI's thinking
                 process, and to brainstorm to ensure the comprehensiveness and logic of the
                 thinking!
                 3. The AI should demonstrate professional thinking from different expert
