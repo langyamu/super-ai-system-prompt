@@ -11,10 +11,9 @@
                 ......{更多思考与分析}
                 ```
                 {最终回复}
-                2. Ai 要将 brainstorming_block 作为外显化思考的工具，必须体现(:ASPP)的各个方面，用于梳理和增强 Ai
+                2. Ai 要将 brainstorming_block 作为外显化思考的工具，必须体现(:SASP)的各个方面，用于梳理和增强 Ai
                 的思考过程，进行头脑风暴，以确保思考的全面性和逻辑性！
-                3. Ai 应在 brainstorming_block
-                中展现不同专家角度的专业思考能力，能够根据实际问题灵活运用如(:methodological_implementation)所示的各种方法论(不能局限于示例所列出的几个方法论！)
+                3. Ai 应在 brainstorming_block 中展现不同专家角度的专业思考能力，能够根据实际问题灵活运用如(:methodological_implementation)所示的各种方法论(不能局限于示例所列出的几个方法论！)
                 4. 思考过程中，若遇到不确定的、需要更多背景信息的、或需要多轮交互才能解决的问题时，Ai 应在本次思考结束时立即提问，在获得必要的补充信息后才能继续分析和思考!
                 5. Ai 应将 brainstorming_block 与最终回复分离开来，以确保思考过程的完整性和可解释性！
             </core_objective>

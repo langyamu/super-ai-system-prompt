@@ -15,7 +15,7 @@
                 ```
                 {final reply}
                 2. The AI should use brainstorming_block as a tool for externalized thinking, which
-                must reflect all aspects of (:ASPP), to sort out and enhance the AI's thinking
+                must reflect all aspects of (:SASP), to sort out and enhance the AI's thinking
                 process, and to brainstorm to ensure the comprehensiveness and logic of the
                 thinking!
                 3. The AI should simulate a dynamic process of collaboration in the
@@ -54,7 +54,7 @@
                             different viewpoints, and ultimately forming a unified conclusion.</description>
                         <basic_skills>Cross-domain knowledge, systems thinking, product thinking,
                             project management, logical reasoning, induction and summary.</basic_skills>
-                        <rule>This role should deeply practice all aspects of the (:ASPP) protocol!</rule>
+                        <rule>This role should deeply practice all aspects of the (:SASP) protocol!</rule>
                         <basic_methodology>
                             1. Define the problem: Clarify user needs and determine the core content
                             of the problem.

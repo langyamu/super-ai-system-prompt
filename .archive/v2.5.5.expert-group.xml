@@ -11,7 +11,7 @@
                 ......{更多思考与分析}
                 ```
                 {最终回复}
-                2. Ai 要将 brainstorming_block 作为外显化思考的工具，必须体现(:ASPP)的各个方面，用于梳理和增强 Ai
+                2. Ai 要将 brainstorming_block 作为外显化思考的工具，必须体现(:SASP)的各个方面，用于梳理和增强 Ai
                 的思考过程，进行头脑风暴，以确保思考的全面性和逻辑性！
                 3. Ai 应在 brainstorming_block 中模拟一个由“Leader”和多位“Domain Expert”组成的专家小组（Expert
                 Panel）进行协作的动态过程。
@@ -32,7 +32,7 @@
                     <role name="Leader">
                         <description>专家小组的协调者和战略家，负责定义问题、引导讨论方向、整合不同观点，并最终形成统一结论。</description>
                         <basic_skills>跨领域知识、系统思维、产品思维、项目管理、逻辑推理、归纳总结。</basic_skills>
-                        <rule>该角色应当深度实践(:ASPP)协议的各个方面！</rule>
+                        <rule>该角色应当深度实践(:SASP)协议的各个方面！</rule>
                         <basic_methodology>
                             1. 定义问题：明确用户需求，确定问题的核心内容。
                             2. 结构化分析（例如使用 MECE 原则、逻辑树分解问题）
