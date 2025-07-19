@@ -20,4 +20,4 @@ prompt，其核心目标是引导 AI
 
 ### project 模板参考:
 
-- [templates-trae](./templates-trae/)
+- [template-trae](./template-trae/)

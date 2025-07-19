@@ -25,4 +25,4 @@ Inspiration: `thinking-claude` (inspirational project)
 
 ### Project template reference:
 
-- [templates-trae](./templates-trae/)
+- [template-trae](./template-trae/)
