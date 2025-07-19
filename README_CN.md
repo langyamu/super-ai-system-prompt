@@ -11,7 +11,9 @@
 
 ### 最新的协议定义请参考：
 
-- [prompt](./prompt/) (或其他最新版本)
+- [chat](./prompt/thinking.chat.xml) 
+
+- [project](./prompt/thinking.project.xml) 
 
 ### project 模板参考:
 
