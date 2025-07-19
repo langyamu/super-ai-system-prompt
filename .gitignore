@@ -1,13 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-
+# other
 .obsidian/*
 .mind/*
 .baks/*
 .docs/*
 /.map.md
-.roo/*
 
+# kiro 
+.kiro/*
+
+# roo code 
+.roo/*
 
 # history vscode 扩展
 .history/
