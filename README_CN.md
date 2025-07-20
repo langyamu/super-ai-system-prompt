@@ -12,12 +12,28 @@ prompt，其核心目标是引导 AI
 
 ## 使用
 
-### 最新的协议定义请参考：
+### chat
 
-- [chat](./prompt/thinking.chat.xml)
+- 提示词：[chat](./prompt/thinking.chat.xml)
 
-- [project](./prompt/thinking.project.xml)
+- 在支持在线网页解析的 chat 环境下输入
+    ```plantext
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
 
-### project 模板参考:
+    start $:SASP
+    ```
 
-- [template-trae](./template-trae/)
+### project
+
+- 提示词：[project](./prompt/thinking.project.xml)
+
+- 模板参考：[template-trae](./template-trae/)
+
+## Change Log
+
+### v2.6.1 (2025-07-20)
+
+- 增强brainstorming_block响应选项机制
+- 新增AI灵活选择：直接回答vs继续思考vs工具查询
+- 统一标签命名并同步所有提示词版本
+- 更新README使用文档

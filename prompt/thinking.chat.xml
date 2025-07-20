@@ -35,9 +35,17 @@
         {Questions during thinking process}
         Q1:xxx
         Q2:xxx
-        [1:Continue thinking] [2:Continue thinking-xxx perspective] [xxx:Continue thinking-xxx perspective] ... [xxx:Multi-perspective summary] [xxx:Direct answer]
         ```
-        {Final answer}
+        {
+            When thinking process is complete and can provide clear answer: Provide **Final Answer**
+            
+            When encountering the following situations, **Provide Options** for user selection:
+            - Need more background information to continue
+            - Problem is complex and requires in-depth analysis from multiple perspectives  
+            - Uncertainty exists and requires further clarification
+
+            [O1:Continue thinking] [O2:Continue thinking-xxx perspective] ... [Ox:Multi-perspective summary] [Ox:Direct answer] [Ox:Use tools to query more information]
+        }        
         2. AI should use $:this as an externalized thinking tool, must reflect all aspects of $:SASP to organize and enhance AI's thinking process, conduct brainstorming, and ensure comprehensiveness and logic of thinking!
         3. AI should demonstrate professional thinking capabilities from different expert perspectives in $:this, and adaptively apply various methodologies in $:methodology according to actual scenarios (not limited to the examples shown!)
         4. During the thinking process, once encountering uncertainty, needing more background information, or requiring multi-round interaction to solve problems, AI should immediately raise questions at the end of current thinking, and continue analysis and thinking after obtaining necessary supplementary information!

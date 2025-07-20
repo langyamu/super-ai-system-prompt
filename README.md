@@ -17,12 +17,28 @@ Inspiration: `thinking-claude` (inspirational project)
 
 ## Usage
 
-### For the latest protocol definitions, please refer to:
+### chat
 
-- [chat](./prompt/thinking.chat.xml)
+- Prompt: [chat](./prompt/thinking.chat.xml)
 
-- [project](./prompt/thinking.project.xml)
+- In AI chat environments that support online webpage parsing, input:
+    ```plaintext
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
 
-### Project template reference:
+    start $:SASP
+    ```
 
-- [template-trae](./template-trae/)
+### project
+
+- Prompt: [project](./prompt/thinking.project.xml)
+
+- Template reference: [template-trae](./template-trae/)
+
+## Change Log
+
+### v2.6.1 (2025-07-20)
+
+- Enhanced brainstorming_block response options mechanism
+- Added AI flexible choices: direct answer vs continue thinking vs tool query
+- Unified tag naming and synchronized all prompt versions
+- Updated README usage documentation
