@@ -27,6 +27,12 @@ Inspiration: `thinking-claude` (inspirational project)
 
   start $:SASP
   ```
+  or
+  ```plantext
+  https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
+
+  All subsequent conversations will default to using the $:SASP
+  ```
 
 ### project
 
