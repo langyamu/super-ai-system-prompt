@@ -7,6 +7,9 @@
 .docs/*
 /.map.md
 
+# trae
+.trae/*
+
 # kiro 
 .kiro/*
 

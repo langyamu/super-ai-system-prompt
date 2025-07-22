@@ -17,11 +17,11 @@ prompt，其核心目标是引导 AI
 - 提示词：[chat](./prompt/thinking.chat.xml)
 
 - 在支持在线网页解析的 chat 环境下输入
-    ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
+  ```plantext
+  https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
 
-    start $:SASP
-    ```
+  start $:SASP
+  ```
 
 ### project
 
@@ -30,6 +30,17 @@ prompt，其核心目标是引导 AI
 - 模板参考：[template-trae](./template-trae/)
 
 ## Change Log
+
+### v2.6.2 (2025-07-22)
+
+refactor(prompt,template,gitignore): 重构项目规则文件并更新gitignore
+
+- template-trae: 将.SASP/_note.md迁移至.trae/rules/project_rules.md
+- 更新gitignore添加.trae目录排除
+- 优化XML文件结构，删除重复内容
+- 重命名basic_rules为basic_thinking_rules
+- 完善用户交互选项逻辑描述
+- 统一中英文版本的核心目标格式
 
 ### v2.6.1 (2025-07-20)
 
