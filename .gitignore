@@ -6,6 +6,7 @@
 .baks/*
 .docs/*
 /.map.md
+.ex/*
 
 # trae
 .trae/*
