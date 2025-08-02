@@ -42,6 +42,14 @@ Inspiration: `thinking-claude` (inspirational project)
 
 ## Change Log
 
+### (pre)v2.7.0 (2025-08-02)
+
+refactor(pre) update v2.7.0
+
+- Removed command syntax content to simplify documentation structure
+- Updated mode descriptions to clarify the difference between /deep and /fast
+- Added a new README file explaining how to use the thinking framework
+
 ### v2.6.2 (2025-07-22)
 
 refactor(prompt,template,gitignore): reorganize project rules file and update

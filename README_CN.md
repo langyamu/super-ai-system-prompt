@@ -37,6 +37,14 @@ prompt，其核心目标是引导 AI
 
 ## Change Log
 
+### (pre)v2.7.0 (2025-08-02)
+
+refactor(pre)更新v2.7.0
+
+- 移除命令语法相关内容，简化文档结构
+- 更新模式描述，更清晰地说明/deep和/fast的区别
+- 添加新README文件说明如何使用思维框架
+
 ### v2.6.2 (2025-07-22)
 
 refactor(prompt,template,gitignore): 重构项目规则文件并更新gitignore
