@@ -42,6 +42,15 @@ Inspiration: `thinking-claude` (inspirational project)
 
 ## Change Log
 
+### (pre)v2.7.0 (2025-08-12)
+
+refactor(pre): Update protocol documentation to enhance descriptions and framework structure
+
+- Refined protocol description for clearer explanation of SASP’s purpose and capabilities  
+- Restructured thinking framework section with more concise terminology  
+- Expanded and clarified brainstorming_block examples and explanations  
+- Revised mode definitions to explicitly distinguish /deep from /fast
+
 ### (pre)v2.7.0 (2025-08-02)
 
 refactor(pre) update v2.7.0

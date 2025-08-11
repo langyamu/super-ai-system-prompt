@@ -37,6 +37,15 @@ prompt，其核心目标是引导 AI
 
 ## Change Log
 
+### (pre)v2.7.0 (2025-08-12)
+
+refactor(pre): 更新协议文档，优化描述和框架结构
+
+- 改进协议描述，更清晰说明SASP的目的和功能
+- 重构思维框架部分，使用更简洁的术语
+- 完善brainstorming_block的示例和说明
+- 调整模式定义，明确/deep和/fast的区别
+
 ### (pre)v2.7.0 (2025-08-02)
 
 refactor(pre)更新v2.7.0
