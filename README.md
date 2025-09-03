@@ -22,18 +22,18 @@ Inspired by: `thinking-claude` (an inspirational project)
 - Prompt: [thinking.md](./prompt/thinking.md)
   - In a chat environment that supports parsing online web pages, enter:
     ```plantext
-    [https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md](https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md)
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
     use SASP
     ```
     or
     ```plantext
-    [https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md](https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md)
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
     All subsequent conversations will default to using the SASP
     ```
 
-### Project
+### Project Template
 
 - Template reference: [template-trae](./template-trae/)
 

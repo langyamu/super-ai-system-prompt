@@ -12,7 +12,7 @@
 
 > 历史版本见：[.archive](./.archive/)
 
-### chat
+### Chat
 
 > 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use SASP` 指令，否则模型可能会忘记 SASP 协议的内容 。
 
@@ -29,7 +29,7 @@
 
     All subsequent conversations will default to using the SASP
     ```
-### project
+### Project Template
 
 - 模板参考：[template-trae](./template-trae/)
 
