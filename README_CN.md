@@ -1,10 +1,8 @@
 # Super AI System Prompt
 
-## 项目概述
+## 概述
 
-项目旨在探索和定义一套通用的 user 与 AI 协作方式的 super system
-prompt，其核心目标是引导 AI
-在处理任何用户请求时，通过一些通用的结构化的分析方法、思想(通用方法论)等，展现出深层次、结构化的思考过程，以及更精准的需求洞察和高效、富有同理心的沟通能力。
+这是一份外显化 AI 的思考过程的提示词。同时也是一套将“抽象化-具体化-重写-增强-问题清单-下一步”六个步骤为轻量工作流的尝试，旨在将 AI 从一个简单的答案提供者，转变为一个能对用户主动提问、共同探索复杂问题的思考伙伴。
 
 ---
 
@@ -12,30 +10,45 @@ prompt，其核心目标是引导 AI
 
 ## 使用
 
+> 历史版本见：[.archive](./.archive/)
+
 ### chat
 
-- 提示词：[chat](./prompt/thinking.chat.xml)
+> 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use SASP` 指令，否则模型可能会忘记 SASP 协议的内容 。
 
-- 在支持在线网页解析的 chat 环境下输入
-  ```plantext
-  https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
+- 提示词：[thinking.md](./prompt/thinking.md)
+  - 在支持在线网页解析的 chat 环境下输入
+    ```plantext
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
-  start $:SASP
-  ```
-  或者
-  ```plantext
-  https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
+    use SASP
+    ```
+    或者
+    ```plantext
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
-  All subsequent conversations will default to using the $:SASP
-  ```
-
+    All subsequent conversations will default to using the SASP
+    ```
 ### project
-
-- 提示词：[project](./prompt/thinking.project.xml)
 
 - 模板参考：[template-trae](./template-trae/)
 
 ## Change Log
+
+### v2.8.0 (2025-09-03)
+
+feat: 重构SASP协议并迁移至新标记语言格式
+
+重构核心协议文件，将XML格式迁移至更简洁的标记语言格式，优化文档结构和描述。更新README文件以反映最新协议版本和使用方式。
+
+新增多语言支持：
+- 添加thinking.cn.md、thinking.en.md和thinking.md作为核心协议文件
+- 更新文档结构，将历史版本移至.archive目录
+
+其他变更：
+- 添加.vscode目录到.gitignore
+- 删除不再使用的.pre目录
+- 简化项目概述并改进使用说明
 
 ### (pre)v2.7.0 (2025-08-12)
 

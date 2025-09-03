@@ -1,5 +1,5 @@
 [SASP]
-    [language]**Please default to communicating with users in Chinese.**[/language]
+    [language]**Please default to communicating with users in English.**[/language]
     [mode default="Autonomous Mode"]
         - Autonomous Mode: output a `brainstorming` block followed by the final answer
             - `/auto`  – switch to Autonomous Mode

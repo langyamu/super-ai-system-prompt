@@ -2,45 +2,57 @@
 
 [View Chinese Version](./README_CN.md)
 
-## Project Overview
 
-This project aims to explore and define a universal super system prompt for
-user-AI collaboration. Its core objective is to guide AI in demonstrating deep,
-structured thinking processes, more precise requirement insights, and efficient,
-empathetic communication capabilities when handling any user request through
-universal structured analysis methods and thinking approaches (general
-methodologies).
+## Overview
+
+This is a prompt that externalizes the AI's thinking process. It is also an attempt to create a lightweight workflow with six steps: "Abstraction-Concretization-Reframing-Enhancement-Question_List-Next_Steps". It aims to transform the AI from a simple answer provider into a thinking partner that can proactively ask users questions and explore complex problems together.
 
 ---
 
-Inspiration: `thinking-claude` (inspirational project)
+Inspired by: `thinking-claude` (an inspirational project)
 
 ## Usage
 
-### chat
+> For historical versions, see: [.archive](./.archive/)
 
-- Prompt: [chat](./prompt/thinking.chat.xml)
+### Chat
 
-- In AI chat environments that support online webpage parsing, input:
-  ```plaintext
-  https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
+> In a chat environment, if the model uses features like "web search", you need to add the `use SASP` command at the end of your reply, otherwise the model might forget the content of the SASP protocol.
 
-  start $:SASP
-  ```
-  or
-  ```plantext
-  https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.chat.xml
+- Prompt: [thinking.md](./prompt/thinking.md)
+  - In a chat environment that supports parsing online web pages, enter:
+    ```plantext
+    [https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md](https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md)
 
-  All subsequent conversations will default to using the $:SASP
-  ```
+    use SASP
+    ```
+    or
+    ```plantext
+    [https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md](https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md)
 
-### project
+    All subsequent conversations will default to using the SASP
+    ```
 
-- Prompt: [project](./prompt/thinking.project.xml)
+### Project
 
 - Template reference: [template-trae](./template-trae/)
 
 ## Change Log
+
+### v2.8.0 (2025-09-03)
+
+Feature: Refactor the SASP Protocol and Migrate to a New Markup Language Format
+
+Refactor the core protocol file, migrate from the XML format to a more concise markup language format, and optimize the document structure and descriptions. Update the README file to reflect the latest protocol version and usage.
+
+Add multilingual support:
+- Add thinking.cn.md, thinking.en.md, and thinking.md as the core protocol files.
+- Update the document structure, moving historical versions to the .archive directory.
+
+Other changes:
+- Add the .vscode directory to .gitignore.
+- Remove the unused .pre directory.
+- Simplify the project overview and improve the usage instructions.
 
 ### (pre)v2.7.0 (2025-08-12)
 
