@@ -39,6 +39,14 @@ Inspired by: `thinking-claude` (an inspirational project)
 
 ## Change Log
 
+### v2.8.1 (2025-09-04)
+
+refactor: Reconstructed the thinking framework and added new functional modules
+
+- Split the "continuous_requirement_correction" module into a separate file  
+- Added the "text_to_image_style_transfer_prompt_specification" functional module  
+- Updated thinking.enhanced.md to integrate all features  
+
 ### v2.8.0 (2025-09-03)
 
 Feature: Refactor the SASP Protocol and Migrate to a New Markup Language Format

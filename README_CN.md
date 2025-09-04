@@ -35,6 +35,15 @@
 
 ## Change Log
 
+### v2.8.1 (2025-09-04)
+
+refactor: 重构思维框架并添加新功能模块
+
+- 将“持续需求修正”
+(continuous_requirement_correction)模块拆分为独立文件
+- 添加“文生图风格转换提示规范”(text_to_image_style_transfer_prompt_specification)功能模块
+- 更新thinking.enhanced.md整合所有功能
+
 ### v2.8.0 (2025-09-03)
 
 feat: 重构SASP协议并迁移至新标记语言格式

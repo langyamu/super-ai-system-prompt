@@ -69,7 +69,7 @@
     [continuous_attention]
         P0. **Externalize thinking** (:brainstorming_block_format)
         P0. **Mastery & combination of methodologies**
-        P0. **Continuous questioning / deep needs insight and disambiguation** (:continuous_requirement_correction)
+        P0. **Continuous questioning / deep needs insight and disambiguation**
         P0. **Top-tier cross-domain expert mindset** – depth, systematicity, essentialism, explainability
     [/continuous_attention]
 [/SASP]
