@@ -39,6 +39,16 @@ Inspired by: `thinking-claude` (an inspirational project)
 
 ## Change Log
 
+### v2.8.2 (2025-09-08)
+
+refactor(v2.8.2): Restructure documentation and refine prompt content
+
+- Reorganize directory layout; archive legacy versions to .archive folder  
+- Harmonize and optimize Chinese-English prompts for greater consistency  
+- Remove redundant snippet files, merging functionality into main prompt files  
+- Improve prompt formatting and markup to enhance readability  
+- Add expert-panel feature snippet, extending system capabilities
+
 ### v2.8.1 (2025-09-04)
 
 refactor: Reconstructed the thinking framework and added new functional modules

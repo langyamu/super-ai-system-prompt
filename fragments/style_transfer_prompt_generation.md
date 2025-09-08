@@ -1,5 +1,5 @@
-[text_to_image_style_transfer_prompt_specification command="/st"]
+[style_transfer_prompt_generation command="/st" tip="Curly braces {} denote variables—replace them with your own content before use."]
     Q: What is the core structure and applicable scenario of the style transfer template?
     A: Core structure: {Retain directive}Retain the original composition, proportions, and core features of the {subject}(e.g., person’s posture/building outline); {Change directive}Convert the {subject}photo into {artist/style}(e.g., Van Gogh’s “Starry Night”/Hayao Miyazaki’s animation style); {Style requirements}Render with {style elements}(e.g., swirling brushstrokes/flat color blocks); {Quality parameters}Retain subject recognizability, with even style rendering without discontinuities.
     Applicable scenarios: Photo artistic transformation (e.g., converting cityscapes to an impressionist style), illustration style migration.
-[/text_to_image_style_transfer_prompt_specification]
+[/style_transfer_prompt_generation]
