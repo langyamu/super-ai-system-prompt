@@ -2,7 +2,7 @@
 
 ## 概述
 
-这是一份外显化 AI 的思考过程的提示词。同时也是一套将“抽象化-具体化-重写-增强-问题清单-下一步”六个步骤为轻量工作流的尝试，旨在将 AI 从一个简单的答案提供者，转变为一个能对用户主动提问、共同探索复杂问题的思考伙伴。
+这是一份外显化 AI 的思考过程的提示词。同时也是一套将“抽象化-具体化-重写-问题清单-规划-下一步”六个步骤为轻量工作流的尝试，旨在将 AI 从一个简单的答案提供者，转变为一个能对用户主动提问、共同探索复杂问题的思考伙伴。
 
 ---
 
@@ -14,26 +14,60 @@
 
 ### Chat
 
-> 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use SASP` 指令，否则模型可能会忘记 SASP 协议的内容 。
+> 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use meta_rules` 指令，否则模型可能会忘记 meta_rules 协议的内容 。
 
 - 提示词：[thinking.md](./prompt/thinking.md)
   - 在支持在线网页解析的 chat 环境下输入
     ```plantext
     https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
-    use SASP
+    use meta_rules
     ```
     或者
     ```plantext
     https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
-    All subsequent conversations will default to using the SASP
+    All subsequent conversations will default to using the meta_rules
     ```
 ### Project Template
 
 - 模板参考：[template-trae](./template-trae/)
 
 ## Change Log
+
+### v2.9.0 (2025-10-06)
+
+refactor(v2.9.0): 全面重构提示词架构，简化工作流并强化执行力
+
+**核心架构变更：**
+- 从嵌套标记语言格式迁移至扁平化 Markdown 结构，大幅提升可读性
+- 引入"分析-计划-执行"(Analyze-Plan-Execute)核心原则，强化系统性思维
+- 简化思维框架：从"抽象-具体化-重构-增强"四步简化为"抽象-具体化-重构"三步核心流程
+
+**模式系统优化：**
+- 移除"自主模式/手动模式"的复杂模式切换机制
+- 简化为两个一次性命令：`/think`（仅输出思考块）和 `/result`（仅输出答案）
+- 默认行为统一为：先输出 brainstorming 块，再给出正式答案
+
+**Brainstorming 块重构：**
+- 移除 "Enhancement"（增强）步骤，避免过度关注 prompt 优化
+- 新增 "Planning"（规划）步骤，聚焦可执行路线图：优先级排序、策略匹配、执行顺序、应急预案
+- 优化 "Abstraction" 描述，明确使用第一性原理进行逻辑重构
+- 改进 "Reframing" 说明，强调视角多样性与综合统一
+- 将 continuous_requirement_correction 的 9 个分析模板项标记为 R1-R9，提升结构化
+
+**行为规则精简：**
+- 将原 9 条 core_rules 精简整合到 behavior 的 default 行为中
+- 移除冗余的"AI 自主决定思考深度"等描述性规则
+- 保留核心行为准则：侦探式深挖、专家式应用方法论、哲学式多维思考、顾问式持续校准
+
+**持续需求修正优化：**
+- 简化 analysis_framework，移除"福尔摩斯式推理"等修饰性描述
+- 保留 4 条核心原则：持续分析、拒绝表面需求、主动挖掘深层意图、归纳到演绎的思维进阶
+
+**文档一致性：**
+- 统一 thinking.md、thinking.cn.md、thinking.en.md 三个语言版本的核心结构
+- thinking.enhanced.md 在标准版基础上增加"风格转换 prompt 生成"和"专业知识雷达"功能模块
 
 ### v2.8.2 (2025-09-08)
 

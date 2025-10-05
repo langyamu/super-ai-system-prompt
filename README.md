@@ -5,7 +5,7 @@
 
 ## Overview
 
-This is a prompt that externalizes the AI's thinking process. It is also an attempt to create a lightweight workflow with six steps: "Abstraction-Concretization-Reframing-Enhancement-Question_List-Next_Steps". It aims to transform the AI from a simple answer provider into a thinking partner that can proactively ask users questions and explore complex problems together.
+This is a prompt that externalizes the AI's thinking process. It is also an attempt to create a lightweight workflow with six steps: "Abstraction-Concretization-Reframing-Question_List-Planning-Next_Steps". It aims to transform the AI from a simple answer provider into a thinking partner that can proactively ask users questions and explore complex problems together.
 
 ---
 
@@ -17,20 +17,20 @@ Inspired by: `thinking-claude` (an inspirational project)
 
 ### Chat
 
-> In a chat environment, if the model uses features like "web search", you need to add the `use SASP` command at the end of your reply, otherwise the model might forget the content of the SASP protocol.
+> In a chat environment, if the model uses features like "web search", you need to add the `use meta_rules` command at the end of your reply, otherwise the model might forget the content of the meta_rules protocol.
 
 - Prompt: [thinking.md](./prompt/thinking.md)
   - In a chat environment that supports parsing online web pages, enter:
     ```plantext
     https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
-    use SASP
+    use meta_rules
     ```
     or
     ```plantext
     https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
 
-    All subsequent conversations will default to using the SASP
+    All subsequent conversations will default to using the meta_rules
     ```
 
 ### Project Template
@@ -38,6 +38,40 @@ Inspired by: `thinking-claude` (an inspirational project)
 - Template reference: [template-trae](./template-trae/)
 
 ## Change Log
+
+### v2.9.0 (2025-10-06)
+
+refactor(v2.9.0): Comprehensive prompt architecture refactoring to simplify workflow and enhance execution
+
+**Core Architecture Changes:**
+- Migrated from nested markup language format to flat Markdown structure, significantly improving readability
+- Introduced "Analyze-Plan-Execute" (APE) core principle to strengthen systematic thinking
+- Simplified thinking framework: reduced from "Abstraction-Concretization-Reframing-Enhancement" four steps to "Abstraction-Concretization-Reframing" three core steps
+
+**Mode System Optimization:**
+- Removed complex "Autonomous Mode/Manual Mode" switching mechanism
+- Simplified to two one-time commands: `/think` (output thinking block only) and `/result` (output answer only)
+- Unified default behavior: output brainstorming block first, then provide formal answer
+
+**Brainstorming Block Refactoring:**
+- Removed "Enhancement" step to avoid over-focusing on prompt optimization
+- Added "Planning" step, focusing on actionable roadmap: prioritization, strategy matching, execution sequence, contingency plans
+- Optimized "Abstraction" description to explicitly use first principles for logical reconstruction
+- Improved "Reframing" explanation to emphasize perspective diversity and unified synthesis
+- Labeled the 9 continuous_requirement_correction analysis template items as R1-R9 for better structure
+
+**Behavior Rules Streamlining:**
+- Consolidated original 9 core_rules into behavior's default actions
+- Removed redundant descriptive rules like "AI decides thinking depth autonomously"
+- Retained core behavioral principles: detective-style deep diving, expert-style methodology application, philosopher-style multi-dimensional thinking, consultant-style continuous calibration
+
+**Continuous Requirement Correction Optimization:**
+- Simplified analysis_framework, removed decorative descriptions like "Holmesian deduction"
+- Retained 4 core principles: continuous analysis, reject surface needs, proactively uncover deep intentions, progress from induction to deduction
+
+**Documentation Consistency:**
+- Unified core structure across thinking.md, thinking.cn.md, and thinking.en.md language versions
+- thinking.enhanced.md adds "style transfer prompt generation" and "specialized knowledge radar" modules on top of standard version
 
 ### v2.8.2 (2025-09-08)
 
