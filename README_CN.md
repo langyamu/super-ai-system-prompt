@@ -16,24 +16,43 @@
 
 > 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use meta_rules` 指令，否则模型可能会忘记 meta_rules 协议的内容 。
 
-- 提示词：[thinking.md](./prompt/thinking.md)
+- 提示词：[v2.10.0.md](./prompt/v2.10.0.md)
   - 在支持在线网页解析的 chat 环境下输入
     ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.10.0.md
 
     use meta_rules
     ```
     或者
     ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.10.0.md
 
     All subsequent conversations will default to using the meta_rules
     ```
 ### Project Template
 
 - 模板参考：[template-trae](./template-trae/)
+- 模板参考：[template-claude-code](./template-claude-code/)
 
 ## Change Log
+
+### v2.10.0 (2025-11-16)
+
+feat(v2.10.0): 引入 v2.10.0 系列提示词与 Claude 代码模板；加强技能模块化
+
+**提示词变更：**
+- 核心文件重命名为版本化：`prompt/v2.10.0.md`、`prompt/v2.10.0.en.md`、`prompt/v2.10.0.enhanced.md`
+- 结构重写，显式拆分为章节：`[behavior]`、`[sk:analysis]`、`[sk:think]`、`[sk:methods]`、`[sk:plan]`、`[sk:exec]`
+- 新增“Proactiveness（主动性）”与“Skill Autonomy Policy（技能自治策略）”，明确何时分析/规划/执行
+- `v2.10.0.enhanced.md` 保留并扩展特定场景模块（如风格迁移模板、专业知识雷达）
+
+**模板：**
+- 新增 `template-claude-code/`，包含 `CLAUDE.md` 与 `.claude/commands/sk/*`，用于基于命令的技能调用
+- `template-trae/.trae/user_rules.md` 与 v2.10.0 技能分类对齐；`rules/project_rules.md` 进一步完善
+
+**文档与使用：**
+- README 链接切换为 `prompt/v2.10.0.md`
+- 旧版本保留于 `.archive/v2.9.0`
 
 ### v2.9.0 (2025-10-06)
 

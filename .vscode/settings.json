@@ -1,3 +1,4 @@
 {
-    "telemetry.feedback.enabled": false
+    "telemetry.feedback.enabled": false,
+    "editor.lineHeight": 2
 }

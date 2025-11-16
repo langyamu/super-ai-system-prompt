@@ -19,16 +19,16 @@ Inspired by: `thinking-claude` (an inspirational project)
 
 > In a chat environment, if the model uses features like "web search", you need to add the `use meta_rules` command at the end of your reply, otherwise the model might forget the content of the meta_rules protocol.
 
-- Prompt: [thinking.md](./prompt/thinking.md)
+- Prompt: [v2.10.0.md](./prompt/v2.10.0.md)
   - In a chat environment that supports parsing online web pages, enter:
     ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.10.0.md
 
     use meta_rules
     ```
     or
     ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/thinking.md
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.10.0.md
 
     All subsequent conversations will default to using the meta_rules
     ```
@@ -36,8 +36,27 @@ Inspired by: `thinking-claude` (an inspirational project)
 ### Project Template
 
 - Template reference: [template-trae](./template-trae/)
+- Template reference: [template-claude-code](./template-claude-code/)
 
 ## Change Log
+
+### v2.10.0 (2025-11-16)
+
+feat(v2.10.0): Introduce new prompt series and Claude code template; strengthen skills modularization
+
+**Prompt changes:**
+- Rename core prompt files to versioned names: `prompt/v2.10.0.md`, `prompt/v2.10.0.en.md`, `prompt/v2.10.0.enhanced.md`
+- Rewrite structure with explicit sections: `[behavior]`, `[sk:analysis]`, `[sk:think]`, `[sk:methods]`, `[sk:plan]`, `[sk:exec]`
+- Add "Proactiveness" and "Skill Autonomy Policy" to clarify when to analyze/plan/execute
+- `v2.10.0.enhanced.md` retains specialized modules (e.g., style-transfer template, knowledge radar)
+
+**Templates:**
+- New `template-claude-code/` with `CLAUDE.md` and `.claude/commands/sk/*` for command-based skill invocation
+- `template-trae/.trae/user_rules.md` aligned with v2.10.0 skills taxonomy; `rules/project_rules.md` refined
+
+**Docs & Usage:**
+- Update README links to use `prompt/v2.10.0.md`
+- Keep older versions under `.archive/v2.9.0`
 
 ### v2.9.0 (2025-10-06)
 
