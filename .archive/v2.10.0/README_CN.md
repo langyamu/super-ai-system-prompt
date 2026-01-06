@@ -2,7 +2,7 @@
 
 ## 概述
 
-这是一份外显化 AI 的思考过程的提示词。它包含五个独立模式（分析、思考、方法、计划、执行），可根据复杂问题求解灵活组合。它将 AI 从简单的答案提供者转变为思考伙伴，能够主动澄清需求、应用方法论、系统规划并透明执行。
+这是一份外显化 AI 的思考过程的提示词。同时也是一套将“抽象化-具体化-重写-问题清单-规划-下一步”六个步骤为轻量工作流的尝试，旨在将 AI 从一个简单的答案提供者，转变为一个能对用户主动提问、共同探索复杂问题的思考伙伴。
 
 ---
 
@@ -16,54 +16,39 @@
 
 > 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use meta_rules` 指令，否则模型可能会忘记 meta_rules 协议的内容 。
 
-- 提示词：[v2.11.0.md](./prompt/v2.11.0.md)
+- 提示词：[v2.10.0.md](./prompt/v2.10.0.md)
   - 在支持在线网页解析的 chat 环境下输入
     ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.11.0.md
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.10.0.md
 
     use meta_rules
     ```
     或者
     ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.11.0.md
+    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.10.0.md
 
     All subsequent conversations will default to using the meta_rules
     ```
+### Project Template
+
+- 模板参考：[template-trae](./template-trae/)
+- 模板参考：[template-claude-code](./template-claude-code/)
+
 ## Change Log
-
-### v2.11.0 (2026-01-06)
-
-refactor(v2.11.0): 从 skills 到 modes 的语义重构
-
-**核心变更：**
-- 重命名模式：[sk:*] → [mode:*]
-- 模式独立性：每个模式完全独立，无依赖关系
-- 灵活组合：支持任意顺序使用（顺序/并行/混合）
-
-**架构调整：**
-- 新增"模式自治策略"（独立运作、灵活组合、软性指导）
-- [mode:plan] 增强最佳实践
-- [mode:methods] 交接改为可选
-- [mode:exec] 支持无计划灵活执行
-
-**文档：**
-- 提示词：prompt/v2.11.0.md
-- 更新所有模板和命令
-- v2.10.0 归档至 .archive
 
 ### v2.10.0 (2025-11-16)
 
-feat(v2.10.0): 引入 v2.10.0 系列提示词与 Claude 代码模板；加强模式模块化
+feat(v2.10.0): 引入 v2.10.0 系列提示词与 Claude 代码模板；加强技能模块化
 
 **提示词变更：**
 - 核心文件重命名为版本化：`prompt/v2.10.0.md`、`prompt/v2.10.0.en.md`、`prompt/v2.10.0.enhanced.md`
-- 结构重写，显式拆分为章节：`[behavior]`、`[mode:analysis]`、`[mode:think]`、`[mode:methods]`、`[mode:plan]`、`[mode:exec]`
-- 新增"Proactiveness（主动性）"与"Mode Autonomy Policy（模式自治策略）"，明确何时分析/规划/执行
+- 结构重写，显式拆分为章节：`[behavior]`、`[sk:analysis]`、`[sk:think]`、`[sk:methods]`、`[sk:plan]`、`[sk:exec]`
+- 新增“Proactiveness（主动性）”与“Skill Autonomy Policy（技能自治策略）”，明确何时分析/规划/执行
 - `v2.10.0.enhanced.md` 保留并扩展特定场景模块（如风格迁移模板、专业知识雷达）
 
 **模板：**
-- 新增 `template-claude-code/`，包含 `CLAUDE.md` 与 `.claude/commands/sk/*`，用于基于命令的模式调用
-- `template-trae/.trae/user_rules.md` 与 v2.10.0 模式分类对齐；`rules/project_rules.md` 进一步完善
+- 新增 `template-claude-code/`，包含 `CLAUDE.md` 与 `.claude/commands/sk/*`，用于基于命令的技能调用
+- `template-trae/.trae/user_rules.md` 与 v2.10.0 技能分类对齐；`rules/project_rules.md` 进一步完善
 
 **文档与使用：**
 - README 链接切换为 `prompt/v2.10.0.md`

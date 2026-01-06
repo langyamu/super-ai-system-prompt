@@ -9,6 +9,9 @@
 .ex/*
 *.local
 
+# opencode 
+.opencode/*
+
 # trae
 .trae/*
 
