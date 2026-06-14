@@ -5,12 +5,11 @@
 
 ## Overview
 
-This is a prompt that externalizes the AI's thinking process. 
-It features five independent modes (analysis, think, methods, plan, exec) 
-that can be flexibly combined for complex problem solving.
-It transforms the AI from a simple answer provider into a thinking partner 
-that proactively clarifies requirements, applies methodologies, 
-plans systematically, and executes with transparency.
+Tired of AI's false agreement and mechanical output? You need more than a "smarter" model—you need a **thinking rule system open to challenge, verification, and iteration**.
+
+This project adopts a "Dao-Fa-Shu" three-layer cognitive governance structure: fundamental tenets (Dao) constrain values, named rules (Fa) define triggerable behaviors, and dynamic decision trees (Shu) adapt to different conversation contexts. Through quick commands like `use tm` (method recommendation), `use cm` (cross-validation), `use fc` (fast clarification), and `use dc` (deep clarification), we transform AI from a passive answerer into an active thinking partner.
+
+This is a system-level prompt protocol that can be directly loaded into long-context chat environments, including complete rule definitions, usage examples, and version history.
 
 ---
 
@@ -22,23 +21,55 @@ Inspired by: `thinking-claude` (an inspirational project)
 
 ### Chat
 
-> In a chat environment, if the model uses features like "web search", you need to add the `use meta_rules` command at the end of your reply, otherwise the model might forget the content of the meta_rules protocol.
+Load [v3.0.0.en.md](./prompt/v3.0.0.en.md) in a long-context chat environment to get started.
 
-- Prompt: [v2.11.0.md](./prompt/v2.11.0.md)
-  - In a chat environment that supports parsing online web pages, enter:
-    ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.11.0.md
+> If the model uses web search or browsing during the conversation, consider appending `use meta_rules` at the end of your message to prevent the protocol from being truncated or forgotten.
 
-    use meta_rules
-    ```
-    or
-    ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.11.0.md
+After loading, activate rules via quick commands:
 
-    All subsequent conversations will default to using the meta_rules
-    ```
+| Command | Function |
+|---|---|
+| `use tm` | Recommend 2–3 analytical frameworks for the current problem |
+| `use m [methodology]` | Execute the specified framework directly |
+| `use cm` | Cross-validate existing deductions with complementary frameworks |
+| `use fc` | Trigger a fast clarification (binary/short answer) |
+| `use dc` | Trigger a deep clarification (9-dimension analysis) |
+
+- Prompt: [v3.0.0.en.md](./prompt/v3.0.0.en.md)
+- Chinese Version: [v3.0.0.md](./prompt/v3.0.0.md)
 
 ## Change Log
+
+### v3.0.0 (2026-06-14)
+
+feat(v3.0.0): Architectural paradigm migration—from ATPE mode system to "Dao-Fa-Shu" rule system
+
+**Core Changes:**
+- Architectural refactoring: Completely deprecated the `[mode:analysis/think/methods/plan/exec]` five-mode system, migrated to a named rule system based on `[rule:xxx]`
+- Introduced the "Dao-Fa-Shu" three-layer cognitive architecture:
+  - Dao (Fundamental Tenets): Four core convictions (truth-seeking, systems thinking, inquiry, iterability)
+  - Fa (Core Principles): Ten named rules (redefine-before-answer, fast-clarify, deep-clarification, epistemic-humility, framework-discipline, methodology-trigger, think-methodology, cross-methodology, falsifiability-check, layered-output)
+  - Shu (Thinking Process): Dynamic decision tree that executes only the most necessary step based on conversation state
+
+**Interaction Upgrade:**
+- Added five quick commands: `use tm` (method recommendation), `use m [name]` (method execution), `use cm` (cross-validation), `use fc` (fast clarification), `use dc` (deep clarification)
+- Iteration interface refactored: Upgraded from `Used: {mode list}` to `[Methodology] + [Assumptions] + [Next Steps]`, where `[Next Steps]` provides `o1-o3` actionable options
+
+**Rule Enhancements:**
+- Deep clarification mechanism: Upgraded the legacy `[mode:analysis]` nine-dimension analysis (R1–R9) to `[rule:deep-clarification-trigger]`, and added `[rule:fast-clarify-trigger]` for minimal-cost elimination of fatal ambiguities
+- Methodology systematization: Added `[rule:think-methodology-trigger]` (candidate framework recommendation) and `[rule:cross-methodology-trigger]` (multi-framework cross-validation)
+- Quality gate: Added `[rule:falsifiability-check]` (falsifiability check) and `[rule:layered-output]` (layered output constraint)
+- Epistemic humility: Added `[rule:epistemic-humility]`, replacing the legacy Professional objectivity section
+
+**Removed:**
+- Removed the five independent modes `[mode:analysis]` / `[mode:think]` / `[mode:methods]` / `[mode:plan]` / `[mode:exec]` and their composition logic
+- Removed Mode Autonomy Policy, Proactiveness, Context Management, Continuous Requirement Refinement sections; their essence integrated into specific rules
+- Removed the four role metaphors (detective/expert/philosopher/consultant), replaced with four fundamental tenets
+
+**Docs:**
+- Added `prompt/v3.0.0.md`
+- Added `prompt/v3.0.0.en.md`
+- Archived v2.11.0 under .archive
 
 ### v2.11.0 (2026-01-06)
 

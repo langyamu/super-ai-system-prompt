@@ -2,7 +2,11 @@
 
 ## 概述
 
-这是一份外显化 AI 的思考过程的提示词。它包含五个独立模式（分析、思考、方法、计划、执行），可根据复杂问题求解灵活组合。它将 AI 从简单的答案提供者转变为思考伙伴，能够主动澄清需求、应用方法论、系统规划并透明执行。
+面对 AI 的虚假附和与机械输出，你需要的不只是"更会思考"的模型，而是一套**可追问、可验证、可迭代的思辨规则系统**。
+
+本项目采用"道法术"三层认知治理结构：以根本信条（Dao）约束价值观，以命名规则（Fa）定义可触发行为，以动态决策树（Shu）适配不同对话场景。通过 `use tm`（方法推荐）、`use cm`（交叉验证）、`use fc`（快速澄清）、`use dc`（深度澄清）等快捷命令，实现从"被动回答"到"主动思辨"的跃迁。
+
+这是一套可直接加载到支持长上下文的 Chat 环境中的系统提示词协议，包含完整的规则定义、使用示例与版本历史。
 
 ---
 
@@ -14,22 +18,55 @@
 
 ### Chat
 
-> 在 chat 环境下如果模型回复时使用了“联网”功能，那么需要在您的回复的末尾添加 `use meta_rules` 指令，否则模型可能会忘记 meta_rules 协议的内容 。
+在支持长上下文的 chat 环境中加载 [v3.0.0.md](./prompt/v3.0.0.md) 即可使用。
 
-- 提示词：[v2.11.0.md](./prompt/v2.11.0.md)
-  - 在支持在线网页解析的 chat 环境下输入
-    ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.11.0.md
+> 若模型回复时使用了"联网"功能，建议在末尾追加 `use meta_rules` 指令，以防协议内容被截断遗忘。
 
-    use meta_rules
-    ```
-    或者
-    ```plantext
-    https://github.com/langyamu/super-ai-system-prompt/raw/refs/heads/main/prompt/v2.11.0.md
+加载后，可通过快捷命令激活对应规则：
 
-    All subsequent conversations will default to using the meta_rules
-    ```
+| 命令 | 作用 |
+|---|---|
+| `use tm` | 针对当前问题推荐 2–3 个分析框架 |
+| `use m [方法名]` | 直接执行指定框架的推演 |
+| `use cm` | 对已有推演结果进行跨框架交叉验证 |
+| `use fc` | 发起一次快速澄清（二元/短答） |
+| `use dc` | 发起深度澄清（九维分析） |
+
+- 提示词：[v3.0.0.md](./prompt/v3.0.0.md)
+- 英文版：[v3.0.0.en.md](./prompt/v3.0.0.en.md)
+
 ## Change Log
+
+### v3.0.0 (2026-06-14)
+
+feat(v3.0.0): 架构范式迁移——从 ATPE 模式系统到“道法术”规则系统
+
+**核心变更：**
+- 架构重构：彻底弃用 `[mode:analysis/think/methods/plan/exec]` 五模式体系，转向基于 `[rule:xxx]` 的命名规则系统
+- 引入“道法术”三层认知架构：
+  - 道（Fundamental Tenets）：四条根本信条（求真、系统、追问、迭代）
+  - 法（Core Principles）：十条核心规则（重新定义、快速澄清、深度澄清、认知谦逊、框架纪律、方法论触发、方法推荐、跨方法验证、可证伪性、分层输出）
+  - 术（Thinking Process）：动态决策树，根据对话状态只执行最必要的一步
+
+**交互升级：**
+- 新增五条快捷命令：`use tm`（方法推荐）、`use m [name]`（方法执行）、`use cm`（交叉验证）、`use fc`（快速澄清）、`use dc`（深度澄清）
+- 迭代接口重构：从 `Used: {mode list}` 升级为 `[Methodology] + [Assumptions] + [Next Steps]`，其中 `[Next Steps]` 提供 `o1-o3` 可执行选项供用户直接选择
+
+**规则增强：**
+- 深度澄清机制：将旧版 `[mode:analysis]` 的九维分析（R1-R9）升级为 `[rule:deep-clarification-trigger]`，并新增 `[rule:fast-clarify-trigger]` 用于最小成本消除致命歧义
+- 方法论体系化：新增 `[rule:think-methodology-trigger]`（候选框架推荐）与 `[rule:cross-methodology-trigger]`（多框架交叉验证）
+- 质量把关：新增 `[rule:falsifiability-check]`（可证伪性检查）与 `[rule:layered-output]`（分层输出约束）
+- 认知谦逊：新增 `[rule:epistemic-humility]`，替代旧版 Professional objectivity 段落
+
+**精简与移除：**
+- 移除 `[mode:analysis]` / `[mode:think]` / `[mode:methods]` / `[mode:plan]` / `[mode:exec]` 五种独立模式及其组合逻辑
+- 移除 Mode Autonomy Policy、Proactiveness、Context Management、Continuous Requirement Refinement 等独立段落，其精华融入具体规则
+- 移除“侦探/专家/哲学家/顾问”四种角色隐喻，转为四条根本信条
+
+**文档：**
+- 新增 `prompt/v3.0.0.md`
+- 新增 `prompt/v3.0.0.en.md`
+- v2.11.0 归档至 .archive
 
 ### v2.11.0 (2026-01-06)
 
