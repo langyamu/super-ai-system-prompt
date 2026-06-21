@@ -7,7 +7,7 @@
 
 Tired of AI's false agreement and mechanical output? You need more than a "smarter" model—you need a **thinking rule system open to challenge, verification, and iteration**.
 
-This project adopts a "Dao-Fa-Shu" three-layer cognitive governance structure: fundamental tenets (Dao) constrain values, named rules (Fa) define triggerable behaviors, and dynamic decision trees (Shu) adapt to different conversation contexts. Through quick commands like `use tm` (method recommendation), `use cm` (cross-validation), `use fc` (fast clarification), and `use dc` (deep clarification), we transform AI from a passive answerer into an active thinking partner.
+This project adopts a "Dao-Fa-Shu" three-layer governance structure: fundamental tenets (Dao) constrain values, named rules (Fa) define triggerable behaviors, and dynamic decision trees (Shu) adapt to different conversation contexts. Through quick commands like `use clm` (methodology catalog), `use cm` (challenge verification), and `use dc` (deep clarification), we transform AI from a passive answerer into an active thinking partner.
 
 This is a system-level prompt protocol that can be directly loaded into long-context chat environments, including complete rule definitions, usage examples, and version history.
 
@@ -21,7 +21,7 @@ Inspired by: `thinking-claude` (an inspirational project)
 
 ### Chat
 
-Load [v3.0.0.en.md](./prompt/v3.0.0.en.md) in a long-context chat environment to get started.
+Load [v3.0.1.en.md](./prompt/v3.0.1.en.md) in a long-context chat environment to get started.
 
 > If the model uses web search or browsing during the conversation, consider appending `use meta_rules` at the end of your message to prevent the protocol from being truncated or forgotten.
 
@@ -29,16 +29,38 @@ After loading, activate rules via quick commands:
 
 | Command | Function |
 |---|---|
-| `use tm` | Recommend 2–3 analytical frameworks for the current problem |
+| `use clm` | Recommend 2–3 candidate frameworks for the current problem |
+| `use clm -a` | List all known methodologies comprehensively |
 | `use m [methodology]` | Execute the specified framework directly |
-| `use cm` | Cross-validate existing deductions with complementary frameworks |
-| `use fc` | Trigger a fast clarification (binary/short answer) |
+| `use cm` | Challenge-verify existing deductions with complementary frameworks |
 | `use dc` | Trigger a deep clarification (9-dimension analysis) |
 
-- Prompt: [v3.0.0.en.md](./prompt/v3.0.0.en.md)
-- Chinese Version: [v3.0.0.md](./prompt/v3.0.0.md)
+- Prompt: [v3.0.1.en.md](./prompt/v3.0.1.en.md)
+- Chinese Version: [v3.0.1.md](./prompt/v3.0.1.md)
 
 ## Change Log
+
+### v3.0.1 (2026-06-21)
+
+refactor(v3.0.1): Rule naming normalization and command system adjustment
+
+**Naming Normalization:**
+- Rule names unified to more precise semantics:
+  - `rule:fast-clarify-trigger` → `rule:quick-clarify-requirement`
+  - `rule:deep-clarification-trigger` → `rule:deep-clarify-requirement`
+  - `rule:framework-discipline` → `rule:discipline-methodology-selection`
+  - `rule:methodology-trigger` → `rule:apply-methodology`
+  - `rule:think-methodology-trigger` → `rule:catalog-methodology`
+  - `rule:cross-methodology-trigger` → `rule:challenge-methodology`
+- Iteration interface output tag: `[Methodology]` → `[Analysis Lens]`
+
+**Command Adjustment:**
+- `use tm` → `use clm`
+- Added `use clm -a` parameter to support full catalog mode
+- Removed `use fc`; fast clarification is now triggered automatically by AI during the `rule:redefine-before-answer` stage
+
+**Docs:**
+- Updated `prompt/v3.0.1.md` and `prompt/v3.0.1.en.md`
 
 ### v3.0.0 (2026-06-14)
 

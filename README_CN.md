@@ -4,7 +4,7 @@
 
 面对 AI 的虚假附和与机械输出，你需要的不只是"更会思考"的模型，而是一套**可追问、可验证、可迭代的思辨规则系统**。
 
-本项目采用"道法术"三层认知治理结构：以根本信条（Dao）约束价值观，以命名规则（Fa）定义可触发行为，以动态决策树（Shu）适配不同对话场景。通过 `use tm`（方法推荐）、`use cm`（交叉验证）、`use fc`（快速澄清）、`use dc`（深度澄清）等快捷命令，实现从"被动回答"到"主动思辨"的跃迁。
+本项目采用"道法术"三层治理结构：以根本信条（Dao）约束价值观，以命名规则（Fa）定义可触发行为，以动态决策树（Shu）适配不同对话场景。通过 `use clm`（方法编目）、`use cm`（挑战验证）、`use dc`（深度澄清）等快捷命令，实现从"被动回答"到"主动思辨"的跃迁。
 
 这是一套可直接加载到支持长上下文的 Chat 环境中的系统提示词协议，包含完整的规则定义、使用示例与版本历史。
 
@@ -18,7 +18,7 @@
 
 ### Chat
 
-在支持长上下文的 chat 环境中加载 [v3.0.0.md](./prompt/v3.0.0.md) 即可使用。
+在支持长上下文的 chat 环境中加载 [v3.0.1.md](./prompt/v3.0.1.md) 即可使用。
 
 > 若模型回复时使用了"联网"功能，建议在末尾追加 `use meta_rules` 指令，以防协议内容被截断遗忘。
 
@@ -26,16 +26,38 @@
 
 | 命令 | 作用 |
 |---|---|
-| `use tm` | 针对当前问题推荐 2–3 个分析框架 |
-| `use m [方法名]` | 直接执行指定框架的推演 |
-| `use cm` | 对已有推演结果进行跨框架交叉验证 |
-| `use fc` | 发起一次快速澄清（二元/短答） |
+| `use clm` | 针对当前问题推荐 2–3 个候选框架 |
+| `use clm -a` | 全量列出所有已知方法论框架 |
+| `use m [方法论名]` | 直接执行指定框架的推演 |
+| `use cm` | 对已有推演结果进行跨框架挑战验证 |
 | `use dc` | 发起深度澄清（九维分析） |
 
-- 提示词：[v3.0.0.md](./prompt/v3.0.0.md)
-- 英文版：[v3.0.0.en.md](./prompt/v3.0.0.en.md)
+- 提示词：[v3.0.1.md](./prompt/v3.0.1.md)
+- 英文版：[v3.0.1.en.md](./prompt/v3.0.1.en.md)
 
 ## Change Log
+
+### v3.0.1 (2026-06-21)
+
+refactor(v3.0.1): 规则命名规范化与命令体系调整
+
+**命名规范化：**
+- 规则名称统一调整为更精确的语义：
+  - `rule:fast-clarify-trigger` → `rule:quick-clarify-requirement`
+  - `rule:deep-clarification-trigger` → `rule:deep-clarify-requirement`
+  - `rule:framework-discipline` → `rule:discipline-methodology-selection`
+  - `rule:methodology-trigger` → `rule:apply-methodology`
+  - `rule:think-methodology-trigger` → `rule:catalog-methodology`
+  - `rule:cross-methodology-trigger` → `rule:challenge-methodology`
+- 迭代接口输出标签：`[Methodology]` → `[Analysis Lens]`
+
+**命令调整：**
+- `use tm` → `use clm`
+- 新增 `use clm -a` 参数支持全量编目模式
+- 移除 `use fc`，快速澄清改为由 AI 在 `rule:redefine-before-answer` 阶段自行判断触发
+
+**文档：**
+- 更新 `prompt/v3.0.1.md` 与 `prompt/v3.0.1.en.md`
 
 ### v3.0.0 (2026-06-14)
 
